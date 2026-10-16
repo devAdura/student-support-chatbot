@@ -1,0 +1,177 @@
+[
+  {
+    "intent": "course_registration",
+    "title": "Course registration",
+    "category": "Academic",
+    "examples": [
+      "How do I register courses?",
+      "course registration",
+      "register courses on portal",
+      "add or drop a course",
+      "I cannot register my courses",
+      "regster courses"
+    ],
+    "response": "Sign in to your institution’s student portal and open Course Registration. Select the courses approved for your programme, check prerequisites and credit limits with your adviser, then submit and save your registration slip. If registration is closed or a course is missing, contact your department. Exact steps depend on your institution.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "fee_deadline",
+    "title": "Fees & payment",
+    "category": "Finance",
+    "examples": [
+      "What is the school fee deadline?",
+      "when are fees due",
+      "pay tuition",
+      "school fees payment",
+      "payment deadline",
+      "how much are school fees",
+      "fee amount",
+      "tuition charges"
+    ],
+    "response": "Check the current fee schedule and payment deadline on your institution’s official portal or with the bursary. Use only approved payment channels and keep your receipt. This demo has no verified fee amounts or deadlines; the 30 March date in the original prototype was an example, not a confirmed institutional deadline.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "transcript_apply",
+    "title": "Transcripts",
+    "category": "Records",
+    "examples": [
+      "How do I apply for a transcript?",
+      "request academic records",
+      "get my transcript",
+      "send transcript to another school"
+    ],
+    "response": "Contact the registry or use the official transcript application section of your student portal. You will usually need your student number, destination details and proof of any required payment. Confirm processing time and delivery options with the registry; avoid posting personal records here.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "exam_schedule",
+    "title": "Exams & timetable",
+    "category": "Academic",
+    "examples": [
+      "Where is my exam timetable?",
+      "exam schedule",
+      "when are examinations",
+      "examination dates",
+      "exam venue",
+      "exam timetable clash"
+    ],
+    "response": "Look for the latest examination timetable on your institution’s official portal or departmental notice board. Confirm the course code, date, time and venue. Report timetable clashes to your department or exams office promptly. This assistant cannot confirm live exam dates.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "results",
+    "title": "Results & grades",
+    "category": "Academic",
+    "examples": [
+      "How do I check my results?",
+      "view grades",
+      "missing result",
+      "my grade is incorrect",
+      "check GPA"
+    ],
+    "response": "Open the Results section of your student portal to view published grades. For a missing or disputed result, contact your course lecturer or department using the official review process. Your adviser can explain GPA and progression rules. This assistant cannot access individual student results.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "admission",
+    "title": "Admissions",
+    "category": "Getting started",
+    "examples": [
+      "How do I apply for admission?",
+      "admission requirements",
+      "application status",
+      "acceptance fee",
+      "new student clearance"
+    ],
+    "response": "Use the institution’s official admissions page to check entry requirements, application dates and your application status. Newly admitted students should follow the published acceptance and clearance steps. Confirm requirements with admissions because they vary by programme and session.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "accommodation",
+    "title": "Accommodation",
+    "category": "Campus life",
+    "examples": [
+      "apply for hostel",
+      "student housing",
+      "accommodation",
+      "hostel allocation",
+      "where can I stay"
+    ],
+    "response": "Check the official accommodation application process and availability with student affairs or the housing office. Apply through approved channels and confirm charges before paying. Do not send money to unverified agents.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "scholarship",
+    "title": "Scholarships",
+    "category": "Finance",
+    "examples": [
+      "financial aid",
+      "scholarship applications",
+      "bursary assistance",
+      "help with tuition costs"
+    ],
+    "response": "Ask student affairs or the financial aid office about available scholarships and bursaries. Check eligibility, required documents and deadlines on official notices. Prepare your academic records and application documents, and verify any external scholarship provider before sharing personal information.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "academic_support",
+    "title": "Study support",
+    "category": "Academic",
+    "examples": [
+      "help me study",
+      "study tips",
+      "prepare for exams",
+      "academic adviser",
+      "improve my study habits"
+    ],
+    "response": "Start with a weekly plan: list your courses, break topics into small tasks and schedule short study sessions. Practise past questions, use active recall and review difficult topics regularly. For course-specific help, visit your lecturer, academic adviser or library learning support.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "technical_support",
+    "title": "Portal help",
+    "category": "Support",
+    "examples": [
+      "forgot my password",
+      "cannot log in",
+      "reset portal password",
+      "student portal error",
+      "login problem"
+    ],
+    "response": "Use the official Forgot Password option on your institution’s portal. If it does not work, contact the ICT help desk through official channels. Never share your password, one-time code or payment credentials in this chat.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "human_support",
+    "title": "Speak to support",
+    "category": "Support",
+    "examples": [
+      "talk to a person",
+      "contact support",
+      "speak to staff",
+      "human adviser",
+      "student affairs contact",
+      "meet an adviser in person",
+      "human adviser",
+      "student welfare"
+    ],
+    "response": "For personal or complex issues, contact the relevant official office: your department for academic matters, bursary for fees, registry for records, ICT for portal access, or student affairs for welfare. This demo does not send messages to staff or create support tickets.",
+    "source": "General guidance — confirm with your institution"
+  },
+  {
+    "intent": "wellbeing",
+    "title": "Wellbeing",
+    "category": "Campus life",
+    "examples": [
+      "feeling overwhelmed",
+      "counselling support",
+      "mental health",
+      "stress at school",
+      "I need emotional support",
+      "student counselling"
+    ],
+    "response": "You deserve support. Consider speaking with your institution’s counsellor, student affairs office or someone you trust. This assistant is not a counsellor. If you are in immediate danger, contact local emergency services or go to the nearest emergency department.",
+    "source": "General guidance — confirm with your institution"
+  }
+]

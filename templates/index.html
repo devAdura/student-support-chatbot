@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf }}" />
+    <title>Campus Companion · Student support</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/style.css') }}"
+    />
+    <script defer src="{{ url_for('static',filename='js/chat.js') }}"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="Campus Companion home"
+          ><span class="brand-mark">C</span
+          ><span>Campus<br /><strong>Companion</strong></span></a
+        >
+        <div class="side-label">YOUR STUDENT SPACE</div>
+        <button class="nav-item active" id="newChat">
+          ＋ &nbsp; New conversation
+        </button>
+        <div class="side-label">EXPLORE SUPPORT</div>
+        <nav id="topics" aria-label="Support topics"></nav>
+        <div class="side-bottom">
+          <span class="status-dot"></span> Here whenever you need us
+          <p>
+            General guidance. Always confirm institutional dates and policies.
+          </p>
+          <a href="/admin">Staff workspace ↗</a>
+        </div>
+      </aside>
+      <main>
+        <header class="topbar">
+          <span
+            >Student support <span class="slash">/</span> Ask your
+            companion</span
+          ><span class="badge">● &nbsp; Available 24/7</span>
+        </header>
+        <section class="workspace">
+          <div class="intro">
+            <div class="eyebrow">A LITTLE GUIDANCE GOES A LONG WAY</div>
+            <h1>Campus life, made clearer.</h1>
+            <p>
+              From your first registration to your final transcript.<br />Ask a
+              question and find your next step.
+            </p>
+          </div>
+          <div class="content-grid">
+            <section class="chat-card" aria-label="Chat with Campus Companion">
+              <div class="chat-heading">
+                <div class="avatar">C</div>
+                <div>
+                  <strong>Your campus companion</strong
+                  ><span>Academic & administrative guidance</span>
+                </div>
+                <button class="text-button" id="clearChat">Clear chat</button>
+              </div>
+              <div
+                class="chat-messages"
+                id="chatMessages"
+                role="log"
+                aria-live="polite"
+                aria-label="Conversation"
+              ></div>
+              <div id="suggestions" class="suggestions">
+                <button data-question="How do I register courses?">
+                  Register courses ↗</button
+                ><button data-question="What is the school fee deadline?">
+                  Fees & deadlines ↗</button
+                ><button data-question="Where is my exam timetable?">
+                  Exam timetable ↗
+                </button>
+              </div>
+              <form id="chatForm" class="composer">
+                <label class="sr-only" for="message">Your question</label
+                ><textarea
+                  id="message"
+                  rows="1"
+                  maxlength="1000"
+                  placeholder="What would you like help with?"
+                  required
+                ></textarea
+                ><button id="send" type="submit" aria-label="Send question">
+                  ↑
+                </button>
+              </form>
+              <div class="composer-note">
+                <span>Enter to send · Shift + Enter for a new line</span
+                ><span id="count">0 / 1000</span>
+              </div>
+              <p id="error" role="alert" class="error"></p>
+            </section>
+            <aside class="resource-column">
+              <article class="resource-card mint">
+                <span class="small-icon">✦</span>
+                <div class="eyebrow">START WHERE YOU ARE</div>
+                <h2>One question.<br />A clearer next step.</h2>
+                <p>
+                  Ask in your own words. We’ll help you navigate the everyday
+                  parts of student life.
+                </p>
+                <div class="orbit-art" aria-hidden="true">
+                  <div class="orbit"></div>
+                  <span>✦</span><i></i>
+                </div>
+              </article>
+              <article class="resource-card">
+                <h3>A person can help, too.</h3>
+                <p>
+                  Complex or personal question? Your institution’s support team
+                  is the best next step.
+                </p>
+                <button
+                  class="resource-link"
+                  data-question="How do I contact student support?"
+                >
+                  Find the right office <span>↗</span>
+                </button>
+              </article>
+              <p class="privacy-note">
+                Your conversation is saved in this browser’s session. Clear chat
+                to delete it from the server. Please don’t share passwords,
+                payment details or personal records.
+              </p>
+            </aside>
+          </div>
+          <footer>
+            Made for the questions that matter.
+            <span>Student support research project · Demo guidance</span>
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

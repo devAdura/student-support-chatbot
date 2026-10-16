@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf }}" />
+    <title>Staff workspace · Campus Companion</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script defer src="/static/js/admin.js"></script>
+  </head>
+  <body>
+    <main class="admin-shell">
+      <a href="/">← Back to student support</a>
+      <div class="eyebrow">CAMPUS COMPANION</div>
+      <h1>Staff workspace</h1>
+      <p>Review feedback and keep student guidance up to date.</p>
+      <p id="notice" role="status"></p>
+      <form id="login" class="admin-panel">
+        <h2>Staff sign in</h2>
+        <label for="password">Administrator password</label
+        ><input
+          id="password"
+          type="password"
+          autocomplete="current-password"
+          required
+          maxlength="200"
+        /><button class="primary">Sign in</button>
+        <p>
+          Access is disabled until an administrator password hash is configured
+          on the server.
+        </p>
+      </form>
+      <div id="dashboard" class="hidden">
+        <button id="logout" class="text-button">Sign out</button>
+        <div id="stats" class="stats"></div>
+        <section class="admin-panel">
+          <h2>Knowledge base</h2>
+          <p>
+            Use verified institutional guidance and identify its source. Updates
+            apply to future answers; existing conversations keep their original
+            responses.
+          </p>
+          <div id="entries"></div>
+        </section>
+        <p>
+          Helpfulness feedback is not a verified accuracy score or a
+          representative satisfaction survey. Raw conversations are not
+          displayed here.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
