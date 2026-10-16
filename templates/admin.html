@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf }}" />
     <title>Staff workspace · Campus Companion</title>
-    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/style.css?v=20261016-fluid" />
     <script defer src="/static/js/admin.js"></script>
+    <link rel="stylesheet" href="/static/css/tailwind.css?v=20261016-fluid" />
   </head>
   <body>
     <main class="admin-shell">
@@ -25,10 +26,7 @@
           required
           maxlength="200"
         /><button class="primary">Sign in</button>
-        <p>
-          Access is disabled until an administrator password hash is configured
-          on the server.
-        </p>
+        <p>Sign in with your institution’s administrator credentials.</p>
       </form>
       <div id="dashboard" class="hidden">
         <button id="logout" class="text-button">Sign out</button>

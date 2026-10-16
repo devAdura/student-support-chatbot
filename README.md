@@ -102,3 +102,18 @@ The `users` table contains anonymous session identifiers, `queries` stores quest
 | `PUT /api/admin/knowledge/<intent>` | Staff-only guidance, source and example editing |
 
 Mutating requests require JSON and the session's `X-CSRF-Token`, supplied by the web interface. All model answers and user messages are rendered as text, not executable HTML.
+
+## Tailwind and fluid interface styling
+
+Tailwind CSS 4 utilities are compiled locally and committed as `public/static/css/tailwind.css`. The existing component stylesheet remains in `public/static/css/style.css`; there is no Tailwind browser CDN, extra runtime script, or CSS reset changing the Flask application.
+
+For visual development, use Node.js 22 or newer:
+
+```sh
+npm ci --ignore-scripts
+npm run build:css
+# Live utility compilation while editing templates/JavaScript:
+npm run watch:css
+```
+
+Edit `assets/tailwind.css` for Tailwind theme utilities. Regenerate and commit the compiled CSS whenever utility classes change. Production serves the committed files without requiring a Node process. Fluid sizing uses CSS `clamp()` and viewport-relative chat height, with accessible minimum text sizes. Newly sent messages animate, restored history does not animate, and `prefers-reduced-motion` disables decorative motion and smooth scrolling.

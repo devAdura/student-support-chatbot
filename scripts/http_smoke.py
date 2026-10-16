@@ -35,7 +35,7 @@ def request(path, method="GET", body=None, csrf=None):
 
 assert json.loads(request("/healthz")[2]) == {"status": "ok"}
 status, headers, html = request("/")
-assert status == 200 and "Campus life, made clearer." in html
+assert status == 200 and "Campus life," in html and "made clearer." in html
 if base.startswith("https:"):
     assert "Secure" in headers.get("Set-Cookie", "")
 csrf = re.search(r'name="csrf-token" content="([^"]+)"', html).group(1)

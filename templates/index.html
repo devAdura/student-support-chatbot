@@ -7,12 +7,16 @@
     <title>Campus Companion · Student support</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static',filename='css/style.css') }}"
+      href="{{ url_for('static',filename='css/style.css',v='20261016-fluid') }}"
     />
-    <script defer src="{{ url_for('static',filename='js/chat.js') }}"></script>
+    <script
+      defer
+      src="{{ url_for('static',filename='js/chat.js',v='20261016-fluid') }}"
+    ></script>
+    <link rel="stylesheet" href="/static/css/tailwind.css?v=20261016-fluid" />
   </head>
   <body>
-    <div class="layout">
+    <div class="layout isolate">
       <aside class="sidebar">
         <a class="brand" href="/" aria-label="Campus Companion home"
           ><span class="brand-mark">C</span
@@ -29,7 +33,22 @@
           <p>
             General guidance. Always confirm institutional dates and policies.
           </p>
-          <a href="/admin">Staff workspace ↗</a>
+          <a href="/admin"
+            >Staff workspace
+            <svg
+              class="arrow-icon"
+              aria-hidden="true"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                d="M5 15 15 5M5 5h10v10"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></a>
         </div>
       </aside>
       <main>
@@ -41,11 +60,11 @@
         </header>
         <section class="workspace">
           <div class="intro">
-            <div class="eyebrow">A LITTLE GUIDANCE GOES A LONG WAY</div>
-            <h1>Campus life, made clearer.</h1>
+            <div class="eyebrow">YOUR NEXT STEP STARTS HERE</div>
+            <h1>Campus life, <em>made clearer.</em></h1>
             <p>
-              From your first registration to your final transcript.<br />Ask a
-              question and find your next step.
+              From your first registration to your final transcript.<br />
+              Ask a question and find your next step.
             </p>
           </div>
           <div class="content-grid">
@@ -66,12 +85,63 @@
                 aria-label="Conversation"
               ></div>
               <div id="suggestions" class="suggestions">
-                <button data-question="How do I register courses?">
-                  Register courses ↗</button
-                ><button data-question="What is the school fee deadline?">
-                  Fees & deadlines ↗</button
-                ><button data-question="Where is my exam timetable?">
-                  Exam timetable ↗
+                <button
+                  aria-label="Register courses ↗"
+                  data-question="How do I register courses?"
+                >
+                  Register courses
+                  <svg
+                    class="arrow-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M5 15 15 5M5 5h10v10"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg></button
+                ><button
+                  aria-label="Fees & deadlines ↗"
+                  data-question="What is the school fee deadline?"
+                >
+                  Fees & deadlines
+                  <svg
+                    class="arrow-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M5 15 15 5M5 5h10v10"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg></button
+                ><button
+                  aria-label="Exam timetable ↗"
+                  data-question="Where is my exam timetable?"
+                >
+                  Exam timetable
+                  <svg
+                    class="arrow-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M5 15 15 5M5 5h10v10"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </button>
               </div>
               <form id="chatForm" class="composer">
@@ -94,7 +164,9 @@
               <p id="error" role="alert" class="error"></p>
             </section>
             <aside class="resource-column">
-              <article class="resource-card mint">
+              <article
+                class="resource-card mint motion-safe:hover:-translate-y-1"
+              >
                 <span class="small-icon">✦</span>
                 <div class="eyebrow">START WHERE YOU ARE</div>
                 <h2>One question.<br />A clearer next step.</h2>
@@ -107,7 +179,7 @@
                   <span>✦</span><i></i>
                 </div>
               </article>
-              <article class="resource-card">
+              <article class="resource-card motion-safe:hover:-translate-y-1">
                 <h3>A person can help, too.</h3>
                 <p>
                   Complex or personal question? Your institution’s support team
@@ -117,7 +189,21 @@
                   class="resource-link"
                   data-question="How do I contact student support?"
                 >
-                  Find the right office <span>↗</span>
+                  Find the right office
+                  <svg
+                    class="arrow-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M5 15 15 5M5 5h10v10"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </button>
               </article>
               <p class="privacy-note">

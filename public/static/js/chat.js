@@ -16,7 +16,7 @@ async function api(path, method = "GET", data) {
 }
 function addMessage(text, kind, details = {}) {
   const row = document.createElement("div");
-  row.className = `message-row ${kind}`;
+  row.className = `message-row ${kind}${details.historical ? "" : " motion-safe:animate-message-in"}`;
   if (kind === "bot") {
     const avatar = document.createElement("div");
     avatar.className = "avatar";
@@ -88,6 +88,7 @@ async function send(text) {
   input.value = "";
   document.getElementById("count").textContent = "0 / 1000";
   const pending = addMessage("Finding your next step…", "bot");
+  pending.dataset.pending = "true";
   try {
     const data = await api("/api/chat", "POST", { message: text });
     pending.remove();
@@ -143,8 +144,12 @@ document.getElementById("newChat").onclick = clear;
     ]);
     welcome();
     for (const m of history.messages) {
-      addMessage(m.message, "user");
-      addMessage(m.response, "bot", { id: m.id, rating: m.rating });
+      addMessage(m.message, "user", { historical: true });
+      addMessage(m.response, "bot", {
+        id: m.id,
+        rating: m.rating,
+        historical: true,
+      });
     }
     for (const topic of topics.topics) {
       const b = document.createElement("button");
